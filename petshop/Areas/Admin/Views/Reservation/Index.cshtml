@@ -1,0 +1,31 @@
+﻿@model List<PostModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CustomerName</th>
+            <th scope="col">AnimalName</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Note</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+        <tr>
+            <td>@reservation.Id</td>
+            <td>@reservation.CustomerName</td>
+            <td>@reservation.AnimalName</td>
+            <td>@reservation.Mail</td>
+            <td>@reservation.Note</td>
+
+        </tr>
+        }
+
+
+    </tbody>
+</table>
+

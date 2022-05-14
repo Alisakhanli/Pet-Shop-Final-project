@@ -1,0 +1,8 @@
+﻿@model Pet
+<form asp-controller="Pet" asp-action="Update" method="post" asp-route-id="@Model.Id">
+    <input placeholder="CustomerName" asp-for="CustomerName" />
+    <input placeholder="AnimalName" asp-for="AnimalName" />
+    <input placeholder="Mail" asp-for="Mail" />
+    <input placeholder="Note" asp-for="Note" />
+    <button type="submit"> Submit</button>
+</form>

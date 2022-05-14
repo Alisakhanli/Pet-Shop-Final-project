@@ -1,0 +1,34 @@
+﻿@model List<Pet>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CustomerName</th>
+            <th scope="col">AnimalName</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Note</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pet in Model) { 
+        <tr>
+            <th scope="row">@pet.Id</th>
+            <td>@pet.CustomerName</td>
+            <td>@pet.AnimalName</td>
+            <td>@pet.Mail</td>
+            <td>@pet.Note</td>
+            <td>
+                <a asp-controller="Pet" asp-action="Update" asp-route-id="@pet.Id"><button>Update</button></a>
+                <a asp-controller="Pet" asp-action="Delete" asp-route-id="@pet.Id"><button>Delete</button></a>
+            </td>
+        </tr>
+        }
+       
+        
+    </tbody>
+</table>
+
